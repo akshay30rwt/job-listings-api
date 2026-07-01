@@ -4,7 +4,7 @@ const addJob = async (req, res) => {
     try {
         const { title, company, location, salary } = req.body
 
-        const job = new Recipe({ title, company, location, salary });
+        const job = new Job({ title, company, location, salary });
         await job.save();
 
         return res.status(201).json({
